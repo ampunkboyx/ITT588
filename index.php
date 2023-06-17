@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE this is main page>
 <html>
   <body>
 
