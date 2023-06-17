@@ -19,7 +19,7 @@ let products = [
         name: 'PAINT SERVICE',
         image: 'airbrush.PNG',
         price: 120000,
-        colors: ['Red', 'Blue', 'Green']
+        colors: ['Red', 'Blue', 'Green', 'Orange', 'Yellow', 'Purple', 'Brown', 'Black']
     },
     {
         id: 2,
@@ -58,22 +58,19 @@ function initApp() {
     products.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
-        if (value.colors) { // Add dropdown for "PAINT SERVICE" product
-            newDiv.innerHTML = `
-                <img src="image/${value.image}">
+        newDiv.innerHTML = `
+            <img src="image/${value.image}">
+            <div class="item-content">
                 <div class="title">${value.name}</div>
+                <div class="price">${value.price.toLocaleString()}</div>
+                <button class="add-to-cart-button" onclick="addToCard(${key})">Add To Cart</button>
+            </div>`;
+        if (value.colors) { // Add dropdown for "PAINT SERVICE" product
+            newDiv.innerHTML += `
                 <select class="color-dropdown" onchange="changeColor(${key}, this.value)">
                     <option value="" disabled selected>Select a color</option>
                     ${generateColorOptions(value.colors)}
-                </select>
-                <div class="price">${value.price.toLocaleString()}</div>
-                <button onclick="addToCard(${key})">Add To Cart</button>`;
-        } else {
-            newDiv.innerHTML = `
-                <img src="image/${value.image}">
-                <div class="title">${value.name}</div>
-                <div class="price">${value.price.toLocaleString()}</div>
-                <button onclick="addToCard(${key})">Add To Cart</button>`;
+                </select>`;
         }
         list.appendChild(newDiv);
     })
@@ -82,7 +79,7 @@ function initApp() {
 function generateColorOptions(colors) {
     let options = '';
     colors.forEach((color) => {
-        options += `<option value="${color}">${color}</option>`;
+        options += `<option value="${color}" style="color: ${color.toLowerCase()}">${color}</option>`;
     });
     return options;
 }
@@ -90,34 +87,40 @@ function generateColorOptions(colors) {
 function changeColor(key, color) {
     listCards[key].color = color;
 }
+
 initApp();
-function addToCard(key){
-    if(listCards[key] == null){
-        // copy product form list to list card
+
+function addToCard(key) {
+    if (listCards[key] == null) {
+        // Copy product from list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
+        if (listCards[key].colors) {
+            listCards[key].color = document.querySelector(`.item:nth-child(${key + 1}) .color-dropdown`).value;
+        }
     }
     reloadCard();
 }
-function reloadCard(){
+
+function reloadCard() {
     listCard.innerHTML = '';
     let count = 0;
     let totalPrice = 0;
-    listCards.forEach((value, key)=>{
+    listCards.forEach((value, key) => {
         totalPrice = totalPrice + value.price;
         count = count + value.quantity;
-        if(value != null){
+        if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
                 <div><img src="image/${value.image}"/></div>
-                <div>${value.name}</div>
+                <div>${value.name}${value.color ? ` - ${value.color}` : ''}</div>
                 <div>${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
-                listCard.appendChild(newDiv);
+            listCard.appendChild(newDiv);
         }
     })
     total.innerText = totalPrice.toLocaleString();

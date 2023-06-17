@@ -127,3 +127,40 @@ header .shopping span{
 .listCard .count{
     margin: 0 10px;
 }
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item img {
+    width: 100px;
+    height: 100px;
+}
+
+.item .item-content {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item .title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item .price {
+    margin-top: 5px;
+}
+
+.item .add-to-cart-button {
+    margin-top: 10px;
+}
+
+.item .color-dropdown {
+    margin-top: 10px;
+    color: black;
+}
