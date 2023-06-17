@@ -34,8 +34,8 @@ footer{
 }
 
 div#content1{
-    width: 70%;
-    height: fit-content;
+    width: 69%;
+    height: 100%;
     float: left;
     border-color: black;
     border-style: dashed;
@@ -44,33 +44,41 @@ div#content1{
 
 div#content2{
     width: 30%;
+    height: 100%;
     float: right;
     border-color: black;
     border-style: dashed;
     border-width: 2px;
 }
 
-div#con1{
-    background-color: bisque;
-    width: 100%;
-    display: flex;
-    overflow: auto;
-    min-height: 100vh;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-}
-
-div#con2{
-    background-color: bisque;
-    width: 100%;
-    height: 209px;
-    display: flex;
-    align-items: flex-start;
+div#incontent1{
+    height: 10%;
     border-color: black;
     border-style: dashed;
     border-width: 2px;
-    border-radius: var(--dl-radius-radius-radius4);
-    flex-direction: column;
-    justify-content: flex-start;
+}
+
+div#incontent2{
+    height: 90%;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+div#con1{
+    width: 50%;
+    float: left;
+    height: 100%;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+div#con2{
+    height: 100%;
+    width: 50%;
+    float: right;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
 }
