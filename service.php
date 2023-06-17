@@ -14,8 +14,9 @@
             
         </header>
         <div id="content">
-            <h1>Service</h1>
-            <red>what we offer</red><br>
+            <h2>Welcome to Our Workshop</h2>
+            <p>At our workshop, we offer a wide range of services to keep your vehicle running smoothly.</p>
+            <p>Choose from the following services:</p>
         </div>
         <footer>
             <p>&copy; 2023 Workshop Website. All rights reserved.</p>
