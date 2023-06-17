@@ -149,6 +149,51 @@ header .shopping span{
 .listCard .count{
     margin: 0 10px;
 }
+.list .item:nth-child(1) .color-dropdown {
+    background-color: #AEB6B9;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.list .item:nth-child(1) .color-dropdown option {
+    background-color: #AEB6B9;
+    color: #fff;
+    font-size: 14px;
+}
+
+.list .item:nth-child(1) .color-dropdown:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.list .item:nth-child(1) .color-dropdown:focus {
+    outline: none;
+}
+
+.list .item:nth-child(1) .color-dropdown:focus:before {
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+.list .item:nth-child(1) .color-dropdown:disabled {
+    background-color: #DCE0E1;
+    color: #AEB6B9;
+    cursor: not-allowed;
+}
 
 .item {
     display: flex;
