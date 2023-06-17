@@ -17,7 +17,17 @@
             <p>At our workshop, we offer a wide range of services to keep your vehicle running smoothly.</p>
             <p>Choose from the following services:</p>
             <br>
-            <div id=
+            <div id="con1">
+                <div id="con2"></div>
+                <div id="con2"></div>
+                <div id="con2"></div>
+            <div id="con1">
+                <div id="con2"></div>
+                <div id="con2"></div>
+                <div id="con2"></div>
+            </div>
+        </div>
+        </div>
             <input type="checkbox" id="myCheckbox1" />
             <label for="myCheckbox1"><img src="icon\airbrush.png" alt="Black Icon" width="200" height="200"><p>Airbrush</p></label>
 

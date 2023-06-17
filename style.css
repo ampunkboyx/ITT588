@@ -24,3 +24,6 @@ footer{
     height: 20px;
 }
 
+div#container{
+    background-color: bisque;
+}
