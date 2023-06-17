@@ -1,1 +1,33 @@
 /*this is a style css for main page */
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: grey;
+    height: 100px;
+}
+
+#content{
+    background-color: #008CBA;
+    height: 800px;
+}
+
+footer{
+    background-color: grey;
+    height: 60px;
+}
+
+button {
+    border: none;
+    background-color: #008CBA;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
