@@ -20,7 +20,7 @@ header .shopping img{
     width: 40px;
 }
 header .shopping span{
-    background: red;
+    background: black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
