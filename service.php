@@ -7,15 +7,15 @@
   <body>
     <div id="container">
         <header>
-            <h1>Workshop Website</h1>
-            <nav>
-                <button type="button" onclick="window.location='index.php';">Home</button>
-                <button type="button" onclick="window.location='service.php';">Service</button>
-                <button type="button" onclick="window.location='about.php';">About</button>
-            </nav>
+            <b>Workshop Muhibbah Underground</b>
+            <button type="button" onclick="window.location='index.php';">Home</button>
+            <button type="button" onclick="window.location='service.php';">Service</button>
+            <button type="button" onclick="window.location='about.php';">About</button>
+            
         </header>
         <div id="content">
             <h1>Service</h1>
+            <red>what we offer</red><br>
         </div>
         <footer>
             <p>&copy; 2023 Workshop Website. All rights reserved.</p>
