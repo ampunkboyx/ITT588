@@ -9,19 +9,45 @@
 header{
     font-family: 'Bebas Neue', sans-serif;
     background-color: white;
-    height: 150px;
+    height: 100px;
     width: 100%;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
 }
 
 #content{
     font-family: 'Bebas Neue', sans-serif;
     background-color: white;
     height: 800px;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
 }
 
 footer{
     background-color: grey;
     height: 20px;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+div#content1{
+    width: 70%;
+    height: fit-content;
+    float: left;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
+}
+
+div#content2{
+    width: 30%;
+    float: right;
+    border-color: black;
+    border-style: dashed;
+    border-width: 2px;
 }
 
 div#con1{

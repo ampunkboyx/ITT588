@@ -13,11 +13,14 @@
             <button type="button" onclick="window.location='about.php';">About</button>
         </header>
         <div id="content">
-            <h2>Welcome to Our Workshop</h2>
-            <p>At our workshop, we offer a wide range of services to keep your vehicle running smoothly.</p>
-            <p>Choose from the following services:</p>
-            <br>
-        </div>
+            <div id=content1>
+                <h2>Welcome to Our Workshop</h2>
+                <p>At our workshop, we offer a wide range of services to keep your vehicle running smoothly.</p>
+                <p>Choose from the following services:</p>
+            </div>
+            <div id=content2>
+                <h2>Payment</h2>
+            </div>
         </div>
             <input type="checkbox" id="myCheckbox1" />
             <label for="myCheckbox1"><img src="icon\airbrush.png" alt="Black Icon" width="200" height="200"><p>Paint</p></label>
@@ -36,7 +39,7 @@
             <input type="checkbox" id="myCheckbox6" />
             <label for="myCheckbox6"><img src="icon\spare-tire.png" alt="Black Icon" width="200" height="200"><p>Tyre</p></label>
         </div>
-        <footer>
+            <footer>
             <p>&copy; 2023 Workshop Website. All rights reserved.</p>
         </footer>
     </div>
