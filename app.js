@@ -18,7 +18,8 @@ let products = [
         id: 1,
         name: 'PAINT SERVICE',
         image: 'airbrush.PNG',
-        price: 120000
+        price: 120000,
+        colors: ['Red', 'Blue', 'Green']
     },
     {
         id: 2,
@@ -51,18 +52,43 @@ let products = [
         price: 120000
     }
 ];
-let listCards  = [];
-function initApp(){
-    products.forEach((value, key) =>{
+let listCards = [];
+
+function initApp() {
+    products.forEach((value, key) => {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
-        newDiv.innerHTML = `
-            <img src="image/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Cart</button>`;
+        if (value.colors) { // Add dropdown for "PAINT SERVICE" product
+            newDiv.innerHTML = `
+                <img src="image/${value.image}">
+                <div class="title">${value.name}</div>
+                <select class="color-dropdown" onchange="changeColor(${key}, this.value)">
+                    <option value="" disabled selected>Select a color</option>
+                    ${generateColorOptions(value.colors)}
+                </select>
+                <div class="price">${value.price.toLocaleString()}</div>
+                <button onclick="addToCard(${key})">Add To Cart</button>`;
+        } else {
+            newDiv.innerHTML = `
+                <img src="image/${value.image}">
+                <div class="title">${value.name}</div>
+                <div class="price">${value.price.toLocaleString()}</div>
+                <button onclick="addToCard(${key})">Add To Cart</button>`;
+        }
         list.appendChild(newDiv);
     })
+}
+
+function generateColorOptions(colors) {
+    let options = '';
+    colors.forEach((color) => {
+        options += `<option value="${color}">${color}</option>`;
+    });
+    return options;
+}
+
+function changeColor(key, color) {
+    listCards[key].color = color;
 }
 initApp();
 function addToCard(key){
