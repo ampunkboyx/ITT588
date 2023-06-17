@@ -16,7 +16,7 @@ closeShopping.addEventListener('click', ()=>{
 let products = [
     {
         id: 1,
-        name: 'PRODUCT NAME 1',
+        name: 'PAINT SERVICE',
         image: '1.PNG',
         price: 120000
     },
