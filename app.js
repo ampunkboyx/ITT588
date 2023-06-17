@@ -6,12 +6,13 @@ let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', ()=>{
+openShopping.addEventListener('click', () => {
     body.classList.add('active');
-})
-closeShopping.addEventListener('click', ()=>{
+});
+
+closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
-})
+});
 
 let products = [
     {
@@ -65,34 +66,43 @@ function initApp() {
                 <div class="price">${value.price.toLocaleString()}</div>
                 <button class="add-to-cart-button" onclick="addToCard(${key})">Add To Cart</button>
             </div>`;
-        if (value.colors) { // Add dropdown for "PAINT SERVICE" product
+        if (value.colors) {
             newDiv.innerHTML += `
-                <select class="color-dropdown" onchange="changeColor(${key}, this.value)">
-                    <option value="" disabled selected>Select a color</option>
-                    ${generateColorOptions(value.colors)}
-                </select>`;
+                <div class="color-container">
+                    <select class="color-dropdown" onchange="changeColor(${key}, this.value)">
+                        ${generateColorOptions(value.colors)}
+                    </select>
+                    <div class="color-preview"></div>
+                </div>`;
         }
         list.appendChild(newDiv);
-    })
+
+        if (value.colors) {
+            let dropdown = newDiv.querySelector('.color-dropdown');
+            dropdown.value = 'Black';
+        }
+    });
 }
 
 function generateColorOptions(colors) {
     let options = '';
     colors.forEach((color) => {
-        options += `<option value="${color}" style="color: ${color.toLowerCase()}">${color}</option>`;
+        options += `<option value="${color}">${color}</option>`;
     });
     return options;
 }
 
 function changeColor(key, color) {
     listCards[key].color = color;
+    let itemCard = listCard.children[key];
+    let colorPreview = itemCard.querySelector('.color-preview');
+    colorPreview.style.backgroundColor = color;
 }
 
 initApp();
 
 function addToCard(key) {
     if (listCards[key] == null) {
-        // Copy product from list to list card
         listCards[key] = JSON.parse(JSON.stringify(products[key]));
         listCards[key].quantity = 1;
         if (listCards[key].colors) {
@@ -121,17 +131,27 @@ function reloadCard() {
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>`;
             listCard.appendChild(newDiv);
+            let colorPreview = newDiv.querySelector('.color-preview');
+            if (value.color) {
+                colorPreview.style.backgroundColor = value.color;
+            }
         }
-    })
+    });
+
     total.innerText = totalPrice.toLocaleString();
     quantity.innerText = count;
 }
-function changeQuantity(key, quantity){
-    if(quantity == 0){
+
+function changeQuantity(key, quantity) {
+    if (quantity == 0) {
         delete listCards[key];
-    }else{
+    } else {
         listCards[key].quantity = quantity;
         listCards[key].price = quantity * products[key].price;
     }
     reloadCard();
+}
+
+function redirectToCheckout() {
+    window.location.href = "checkout.html";
 }
