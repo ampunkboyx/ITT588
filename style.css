@@ -8,7 +8,7 @@
 
 header{
     font-family: 'Bebas Neue', sans-serif;
-    background-color: white;
+    background-color: blue;
     height: 100px;
     width: 100%;
     border-color: black;
@@ -19,7 +19,7 @@ header{
 #content{
     font-family: 'Bebas Neue', sans-serif;
     background-color: white;
-    height: 800px;
+    height: 980px;
     border-color: black;
     border-style: dashed;
     border-width: 2px;
@@ -27,7 +27,7 @@ header{
 
 footer{
     background-color: grey;
-    height: 20px;
+    height: 50px;
     border-color: black;
     border-style: dashed;
     border-width: 2px;
@@ -37,7 +37,7 @@ div#content1{
     width: 69%;
     height: 100%;
     float: left;
-    border-color: black;
+    border-color: red;
     border-style: dashed;
     border-width: 2px;
 }
@@ -46,30 +46,30 @@ div#content2{
     width: 30%;
     height: 100%;
     float: right;
-    border-color: black;
+    border-color: red;
     border-style: dashed;
     border-width: 2px;
 }
 
 div#incontent1{
     height: 10%;
-    border-color: black;
+    border-color: green;
     border-style: dashed;
     border-width: 2px;
 }
 
 div#incontent2{
-    height: 90%;
-    border-color: black;
+    height: 89%;
+    border-color: green;
     border-style: dashed;
     border-width: 2px;
 }
 
 div#con1{
-    width: 50%;
-    float: left;
+    width: 48%;
     height: 100%;
-    border-color: black;
+    float: left;
+    border-color: blue;
     border-style: dashed;
     border-width: 2px;
 }
@@ -78,7 +78,8 @@ div#con2{
     height: 100%;
     width: 50%;
     float: right;
-    border-color: black;
+    border-color: blue;
     border-style: dashed;
     border-width: 2px;
 }
+

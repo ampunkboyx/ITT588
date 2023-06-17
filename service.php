@@ -20,19 +20,16 @@
                     <p>Choose from the following services:</p>
                 </div>
                 <div id=incontent2>
-                    <div id=con1>
-
-                    </div>
-                    <div id=con2>
-                        
-                    </div>
+                <input type="checkbox" id="myCheckbox1" />
+            <label for="myCheckbox1"><img src="icon\airbrush.png" alt="Black Icon" width="200" height="200"><p>Paint</p></label>
                 </div>
             </div>
             <div id=content2>
             <h2>Payment</h2>
                 <p>Here the total</p>
             </div>
-            <footer>
+        </div>
+        <footer>
             <p>&copy; 2023 Workshop Website. All rights reserved.</p>
         </footer>
     </div>
