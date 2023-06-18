@@ -1,0 +1,298 @@
+
+
+/*** 
+=====================================================
+	Banner Style1 Area style
+=====================================================
+***/
+.banner-style1-area{
+    position: relative;
+    display: block;
+    padding: 308px 0 170px;
+    z-index: 10;
+}
+.banner-style1-area .banner-shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.banner-style1-area .layer-outer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.banner-style1-area .layer-outer .banner-bg-shape{
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: #eab71c;
+}
+.banner-bg-image{
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.banner-content-box{
+    position: relative;
+    display: block;
+    z-index: 2;
+}
+.banner-content-box .shape1 {
+    position: absolute;
+    top: -100px;
+    left: -220px;
+	-webkit-animation: service_hexagon_2 15s infinite linear;
+    -moz-animation: service_hexagon_2 15s infinite linear;
+    -o-animation: service_hexagon_2 15s infinite linear;
+    animation: service_hexagon_2 15s infinite linear;
+}
+.banner-content-box .shape2 {
+    position: absolute;
+    top: 0px;
+    left: -150px;
+}
+.banner-content-box .shape3 {
+    position: absolute;
+    bottom: -100px;
+    left: 40%;
+    -webkit-animation: animation1 5s ease-in infinite;
+    animation: animation1 5s ease-in infinite;
+}
+.banner-content-box .big-title{
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: 700;
+    text-shadow: 0px 10px 3px rgba(12, 21, 41, 0.1);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.banner-content-box .text{
+    position: relative;
+    display: block;
+    padding: 20px 0 32px;
+}
+.banner-content-box .text p{
+    color: #0c1529;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    margin: 0;
+}
+.banner-content-box .button-box{
+    position: relative;
+    display: block;
+}
+.banner-content-box .button-box a.btn-one {
+    background: #0c1529;
+    padding-left: 45px;
+    padding-right: 45px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 65px;
+    font-weight: 600;
+}
+.banner-content-box .button-box a.btn-one:before {
+    border: 2px solid #0c1529;
+}
+.banner-content-box .button-box a.btn-one:hover:after {
+    background: #dcab16;
+}
+
+
+
+/*** 
+=====================================================
+	Banner Style2 Area style
+=====================================================
+***/
+.banner-style2-area{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 160px 0 200px;
+    z-index: 10;    
+}
+.banner-style2-area .banner-shape {
+    position: absolute;
+    top: -170px;
+    right: 0;
+    opacity: 0.06;
+    z-index: 2;
+}
+
+.banner-content-box.style2 .slide-shape1 {
+    position: absolute;
+    top: -10px;
+    left: -200px;
+    -webkit-animation: service_hexagon_2 15s infinite linear;
+    -moz-animation: service_hexagon_2 15s infinite linear;
+    -o-animation: service_hexagon_2 15s infinite linear;
+    animation: service_hexagon_2 15s infinite linear;
+}
+.banner-content-box.style2 .slide-shape2 {
+    position: absolute;
+    top: 5px;
+    left: -190px;
+    z-index: -1;
+}
+.banner-content-box.style2 .slide-shape3{
+    position: absolute;
+    top: -90px;
+    left: -140px;
+    z-index: -2;
+}
+.banner-content-box.style2 .slide-shape4{
+    position: absolute;
+    left: -300px;
+    bottom: -120px;
+    z-index: -2;
+}
+
+.banner-content-box.style2 .slide-shape5{
+    position: absolute;
+    top: -50px;
+    right: 30%;
+    z-index: -2;
+}
+.banner-content-box.style2 .slide-shape6{
+    position: absolute;
+    top: 0px;
+    right: 27%;
+    z-index: -2;
+}
+.banner-content-box.style2 .slide-shape7{
+    position: absolute;
+    top: -80px;
+    right: -10%;
+    -webkit-animation: animation1 5s ease-in infinite;
+    animation: animation1 5s ease-in infinite;
+}
+
+.banner-content-box.style2 .slide-shape8{
+    position: absolute;
+    bottom: 0px;
+    right: -60px;
+    z-index: -1;
+}
+.banner-content-box.style2 .slide-shape9{
+    position: absolute;
+    bottom: -100px;
+    right: -160px;
+    z-index: -2;
+}
+
+.banner-content-box.style2 .banner-style2-main-image{
+    position: absolute;
+    top: auto;
+    bottom: -550px;
+    right: -80px;
+}
+.banner-content-box.style2 .big-title{
+    color: #0c1529;
+    font-size: 80px;
+    line-height: 90px;
+    text-shadow: 0px 10px 3px rgba(12, 21, 41, 0.1);
+}
+
+
+
+/*** 
+=====================================================
+	Banner Style3 Area style
+=====================================================
+***/
+.banner-style3-area {
+    position: relative;
+    display: block;
+    background-color: transparent;
+    padding: 120px 0 190px;
+    z-index: 10;
+}
+.banner-style3-area .layer-outer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-attachment: scroll;
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-style3-area .shape1{
+    position: absolute;
+    left: 100px;
+    bottom: 180px;
+    z-index: 2;
+}
+.banner-style3-area .shape2{
+    position: absolute;
+    left: 120px;
+    bottom: 70px;
+    z-index: 1;
+}
+.banner-style3-area .thm-form-style1.style1instyle2 .shape3 {
+    position: absolute;
+    top: 260px;
+    left: -100px;
+    z-index: -1;
+}
+.banner-style3-area .thm-form-style1.style1instyle2 .shape4 {
+    position: absolute;
+    top: -10px;
+    right: -50px;
+    z-index: -1;
+}
+
+
+.banner-style3-area .thm-form-style1.style1instyle2 {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    max-width: 530px;
+    width: 100%;
+    padding: 48px 50px 60px;
+}
+.banner-style3-area .thm-form-style1.style1instyle2 .title{
+    padding-bottom: 24px;    
+}
+.banner-style3-area .thm-form-style1.style1instyle2 .title h2 {
+    line-height: 45px;
+}
+
+.banner-content-box.style3{
+    position: relative;
+    display: block;
+    padding-top: 30px;
+}
+.banner-content-box.style3 .big-title {
+    color: #ffffff;
+    font-size: 80px;
+    line-height: 90px;
+}
+.banner-content-box.style3 .text p {
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
