@@ -115,9 +115,7 @@ h3 {
     line-height: 1.2em;
     font-weight: 400;
 }
-h4 {
 
-}
 a,
 a:hover,
 a:active,
@@ -139,7 +137,6 @@ a:focus {
 .fancybox-spaceball {
     border-radius: 20px;
 }
-
 
 @media (min-width: 1200px) {
     .container {
