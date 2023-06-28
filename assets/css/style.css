@@ -2504,21 +2504,22 @@ select:focus {
     margin-top: 10px;
     color: black;
 }
-/*
+
 header{
     display: grid;
     grid-template-columns: 1fr 50px;
     margin-top: 50px;
 }
-header .shopping{
+/*
+.shopping{
     position: relative;
     text-align: right;
     margin-top: -90px;
 }
-header .shopping img{
-    width: 40px;
+.shopping img{
+    width: 10px;
 }
-header .shopping span{
+.shopping span{
     background: black;
     border-radius: 50%;
     display: flex;
