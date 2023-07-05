@@ -20,14 +20,14 @@
     margin-top: 10px;
     font-weight: bold;
   }
-  .list{
+  .list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     row-gap: 40px;
     margin-top: 50px;
 }
-.list .item{
+.list .item {
     background: #ffffff;
     box-shadow: 0px 10px 50px 0px rgba(12, 21, 41, 0.15);
     border-top-right-radius: 15px;
@@ -35,36 +35,43 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-.list .item img{
+.list .item img {
     position: relative;
     display: block;
     width: 100%;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
-.list .item .title{
+.list .item .title {
     color: #0c1529;
     font-size: 26px;
     line-height: 30px;
     font-weight: 700;
     padding: 20px 40px 10px;
 }
-.list .item .price{
+.list .item .price {
     margin: 10px;
     line-height: 30px;
     font-weight: 700;
     padding: 0px 40px 10px;
     font-size: larger;
 }
-.list .item button{
-    background-color: #1C1F25;
-    color: #fff;
-    padding: 10px 40px 20px;
-    border-radius: 5px;
-    width: 50%;
-    height: 35%;
-    margin-left: 25%;
-    margin-bottom: 20px;
+.list .item button {
+  background-color: #000000;
+  color: #f7f4f2;
+  font-weight: bolder;
+  font-size: large;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 5px;
+  width: 50%;
+  height: 35%;
+  margin-left: 25%;
+  margin-bottom: 20px;
+}
+.list .item button:hover {
+  background-color: #f8a460;
+  color: #0a0a0a; 
 }
 .servicecontainer {
     width:100%;
@@ -78,18 +85,19 @@
   top:0;
   left: 100%;
   width: 500px;
-  background-color: #453E3B;
+  background-color: #e0d5d0;
   height: 100vh;
   transition: 0.5s;
 }
 .active .card{
   left: calc(100% - 500px);
+  z-index: 9999999999;
 }
 .active .container{
  transform: translateX(-200px);
 }
 .card h1{
-  color: #E8BC0E;
+  color: #0a0a0a;
   font-weight: 100;
   margin: 0;
   padding: 0 20px;
@@ -140,6 +148,7 @@
 .listCard .count{
   margin: 0 10px;
 }
+
 /*the template
 
 .blog-grid-style1-area{
