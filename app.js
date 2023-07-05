@@ -63,7 +63,7 @@ function initApp() {
             <div class="item-content">
                 <div class="title">${value.name}</div>
                 <div class="price">RM ${value.price.toLocaleString()}</div>
-                <button class="add-to-cart-button" onclick="addToCard(${key})">Add To Cart</button>
+                <button class="button" onclick="addToCard(${key})" >Add To Cart</button>
             </div>`;
         if (value.colors) {
             newDiv.innerHTML += `
