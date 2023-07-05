@@ -134,9 +134,9 @@ function reloadCard() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div></div>
+                <div><img src="image/${colorImageName}"/></div>
                 <div>${value.name}${value.color ? ` - ${value.color}` : ''}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>RM ${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
@@ -145,15 +145,8 @@ function reloadCard() {
             listCard.appendChild(newDiv);
         }
     })
-    total.innerText = totalPrice.toLocaleString();
+    total.innerText = `RM ${totalPrice.toLocaleString()}`;
     quantity.innerText = count;
-}
-
-function changeColor(key, color) {
-    listCards[key].color = color;
-
-    // Update the cart if the product is already in the cart
-    reloadCard();
 }
 
 function changeQuantity(key, quantity){
