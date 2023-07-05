@@ -138,12 +138,9 @@ function reloadCard() {
         count = count + value.quantity;
         if (value != null) {
             let newDiv = document.createElement('li');
-            let imageName = products[key].image;
-            let colorImageName = imageName.replace('.PNG', value.color ? `_${value.color.toLowerCase()}.png` : '.PNG');
             newDiv.innerHTML = `
-                <div><img src="image/${colorImageName}"/></div>
                 <div>${value.name}${value.color ? ` - ${value.color}` : ''}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div>RM ${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
@@ -152,9 +149,10 @@ function reloadCard() {
             listCard.appendChild(newDiv);
         }
     })
-    total.innerText = totalPrice.toLocaleString();
+    total.innerText = `RM ${totalPrice.toLocaleString()}`;
     quantity.innerText = count;
 }
+
 
 function changeQuantity(key, quantity){
     if(quantity == 0){
