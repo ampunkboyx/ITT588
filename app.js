@@ -17,39 +17,39 @@ let products = [
     {
         id: 1,
         name: 'PAINT SERVICE',
-        image: 'airbrush.PNG',
-        price: 120000,
+        image: 'car-paint-service.jpg',
+        price: 1000,
         colors: ['Red', 'Blue', 'Green', 'Orange', 'Yellow', 'Purple', 'Brown', 'Black']
     },
     {
         id: 2,
         name: 'AIRCOND SERVICE',
-        image: 'aircond.PNG',
-        price: 120000
+        image: 'car-aircond-service.jpg',
+        price: 180
     },
     {
         id: 3,
         name: 'BATTERY REPLACEMENT',
-        image: 'battery.PNG',
-        price: 220000
+        image: 'car-battery-service.jpg',
+        price: 300
     },
     {
         id: 4,
         name: 'CAR DIAGNOSTIC',
-        image: 'diagnostic.PNG',
-        price: 123000
+        image: 'car-diagnostic-service.jpeg',
+        price: 250
     },
     {
         id: 5,
         name: 'CHANGE OIL & FILTER',
-        image: 'engine-oil.PNG',
-        price: 320000
+        image: 'car-engine-oil-service.jpg',
+        price: 50
     },
     {
         id: 6,
         name: 'TIRE INSTALLATION',
-        image: 'spare-tire.PNG',
-        price: 120000
+        image: 'car-spare-tire-service.jpg',
+        price: 2000
     }
 ];
 let listCards = [];
@@ -59,10 +59,10 @@ function initApp() {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
+            <img src="assets/images/${value.image}">
             <div class="item-content">
                 <div class="title">${value.name}</div>
-                <div class="price">${value.price.toLocaleString()}</div>
+                <div class="price">RM ${value.price.toLocaleString()}</div>
                 <button class="add-to-cart-button" onclick="addToCard(${key})">Add To Cart</button>
             </div>`;
         if (value.colors) {
