@@ -85,7 +85,7 @@
   top:0;
   left: 100%;
   width: 500px;
-  background-color: #453E3B;
+  background-color: #e0d5d0;
   height: 100vh;
   transition: 0.5s;
 }
@@ -97,7 +97,7 @@
  transform: translateX(-200px);
 }
 .card h1{
-  color: #E8BC0E;
+  color: #0a0a0a;
   font-weight: 100;
   margin: 0;
   padding: 0 20px;
