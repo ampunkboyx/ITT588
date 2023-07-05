@@ -63,34 +63,29 @@ function initApp() {
             <div class="item-content">
                 <div class="title">${value.name}</div>
                 <div class="price">RM ${value.price.toLocaleString()}</div>
-                <button class="button" onclick="addToCard(${key})" >Add To Cart</button>
+                <div class="price">${value.id === 1 ? generateColorDropdown(key) : ''}</div>
+                ${value.id !== 1 ? '<br>' : ''}
+                <button class="button" onclick="addToCard(${key})" >Add To Cart</button> 
             </div>`;
-        if (value.colors) {
-            newDiv.innerHTML += `
-                <div class="color-container">
-                    <select class="color-dropdown" onchange="changeColor(${key}, this.value)">
-                        ${generateColorOptions(value.colors)}
-                    </select>
-                    <div class="color-preview"></div>
-                </div>`;
-        }
         list.appendChild(newDiv);
-        
-        // Set default color to black if dropdown exists
-        if (value.colors) {
-            let dropdown = newDiv.querySelector('.color-dropdown');
-            dropdown.value = 'Black';
-        }
     });
 }
 
-
-function generateColorOptions(colors) {
-    let options = '';
-    colors.forEach((color) => {
-        options += `<option value="${color}" style="color: ${color.toLowerCase()}">${color}</option>`;
-    });
-    return options;
+function generateColorDropdown(key) {
+    let dropdownOptions = '';
+    if (products[key].colors && products[key].colors.length > 0) {
+        products[key].colors.forEach((color) => {
+            dropdownOptions += `<option value="${color}" style="color: ${color.toLowerCase()}">${color}</option>`;
+        });
+        return `
+            <div class="color-container">
+                <select class="color-dropdown" onchange="changeColor(${key}, this.value)">
+                    ${dropdownOptions}
+                </select>
+                <div class="color-preview"></div>
+            </div>`;
+    }
+    return '';
 }
 
 function changeColor(key, color) {
@@ -139,6 +134,7 @@ function reloadCard() {
         if (value != null) {
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
+                <div><img src="image/${colorImageName}"/></div>
                 <div>${value.name}${value.color ? ` - ${value.color}` : ''}</div>
                 <div>RM ${value.price.toLocaleString()}</div>
                 <div>
@@ -152,7 +148,6 @@ function reloadCard() {
     total.innerText = `RM ${totalPrice.toLocaleString()}`;
     quantity.innerText = count;
 }
-
 
 function changeQuantity(key, quantity){
     if(quantity == 0){
