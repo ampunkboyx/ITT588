@@ -84,7 +84,6 @@ function initApp() {
     });
 }
 
-
 function generateColorOptions(colors) {
     let options = '';
     colors.forEach((color) => {
@@ -113,7 +112,6 @@ function changeColor(key, color) {
     // Update the cart if the product is already in the cart
     reloadCard();
 }
-
 
 initApp();
 
