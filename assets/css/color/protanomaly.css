@@ -1,8 +1,6 @@
-
-
 /*** 
 =====================================================
-	Theme Main Color Css
+	Theme Main Color Css (Protanomaly)
 =====================================================
 ***/
 .thm_clr1,
@@ -33,20 +31,13 @@
 .single-footer-widget .footer-contact-info ul li .icon span,
 .footer-menu-style1 ul li a:hover,
 .single-footer-widget .footer-contact-info ul li .text a:hover,
-.copyright-text p a,
 .single-info-box-style3 .inner .icon-holder span {
-    color: #FF6600;
+    color: #8080c0; /* Adjust the color for Protanomaly */
 }
-
-
-
-
-
-
 
 /*** 
 =====================================================
-	Theme Main Background Color Css
+	Theme Main Background Color Css (Protanomaly)
 =====================================================
 ***/
 .thm_bgclr1,
@@ -74,46 +65,30 @@
 .single-team-item .social-icon:hover .social-share-icon:before,
 .single-team-item .social-icon:hover .social-share-icon span:before,
 .footer-widget-links1 li a:before {
-    background: #FF6600;
+    background: #8080c0; /* Adjust the color for Protanomaly */
 }
-
-
-
-
-
-
 
 /*** 
 =====================================================
-	Theme Main Border Color Css
+	Theme Main Border Color Css (Protanomaly)
 =====================================================
 ***/
 .mobile-menu .navigation li > a:before {
-    border-left: 5px solid #FF6600;
+    border-left: 5px solid #8080c0; /* Adjust the color for Protanomaly */
 }
 .btn-one:before{
-    border: 2px solid #FF6600;
+    border: 2px solid #8080c0; /* Adjust the color for Protanomaly */
 }
 .banner-content-box.style3 .button-box a.btn-one:before {
-    border: 2px solid #FF6600;
+    border: 2px solid #8080c0; /* Adjust the color for Protanomaly */
 }
 .choose-style2-area .choose-style1-content-box .button-box .btn-one:before {
-    border: 2px solid #FF6600;
+    border: 2px solid #8080c0; /* Adjust the color for Protanomaly */
 }
-
 
 .styled-pagination li:hover a,
 .styled-pagination li.active a,
 .styled-pagination li.prev a:hover,
 .styled-pagination li.next a:hover {
-    border-color: #FF6600;
+    border-color: #8080c0; /* Adjust the color for Protanomaly */
 }
-
-
-
-
-
-
-
-
-

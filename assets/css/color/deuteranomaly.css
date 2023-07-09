@@ -1,8 +1,6 @@
-
-
 /*** 
 =====================================================
-	Theme Main Color Css
+	Theme Main Color Css (Deuteranopia)
 =====================================================
 ***/
 .thm_clr1,
@@ -33,20 +31,13 @@
 .single-footer-widget .footer-contact-info ul li .icon span,
 .footer-menu-style1 ul li a:hover,
 .single-footer-widget .footer-contact-info ul li .text a:hover,
-.copyright-text p a,
 .single-info-box-style3 .inner .icon-holder span {
-    color: #6377ee;
+    color: #006600;
 }
-
-
-
-
-
-
 
 /*** 
 =====================================================
-	Theme Main Background Color Css
+	Theme Main Background Color Css (Deuteranopia)
 =====================================================
 ***/
 .thm_bgclr1,
@@ -74,46 +65,37 @@
 .single-team-item .social-icon:hover .social-share-icon:before,
 .single-team-item .social-icon:hover .social-share-icon span:before,
 .footer-widget-links1 li a:before {
-    background: #6377ee;
+    background: #006600; /* Adjust the color for Protanomaly */
 }
-
-
-
-
-
-
 
 /*** 
 =====================================================
-	Theme Main Border Color Css
+	Theme Main Border Color Css (Deuteranopia)
 =====================================================
 ***/
 .mobile-menu .navigation li > a:before {
-    border-left: 5px solid #6377ee;
+    border-left: 5px solid #006600; /* Dark green */
 }
 .btn-one:before{
-    border: 2px solid #6377ee;
+    border: 2px solid #006600; /* Dark green */
 }
 .banner-content-box.style3 .button-box a.btn-one:before {
-    border: 2px solid #6377ee;
+    border: 2px solid #006600; /* Dark green */
 }
 .choose-style2-area .choose-style1-content-box .button-box .btn-one:before {
-    border: 2px solid #6377ee;
+    border: 2px solid #006600; /* Dark green */
 }
-
 
 .styled-pagination li:hover a,
 .styled-pagination li.active a,
 .styled-pagination li.prev a:hover,
 .styled-pagination li.next a:hover {
-    border-color: #6377ee;
+    border-color: #006600; /* Dark green */
 }
 
-
-
-
-
-
-
-
-
+.banner-content-box.style2 .big-title {
+    color: #006600;
+    font-size: 80px;
+    line-height: 90px;
+    text-shadow: 0px 10px 3px rgba(12, 21, 41, 0.1);
+}

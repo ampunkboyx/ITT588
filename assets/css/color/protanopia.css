@@ -1,5 +1,3 @@
-
-
 /*** 
 =====================================================
 	Theme Main Color Css
@@ -33,16 +31,9 @@
 .single-footer-widget .footer-contact-info ul li .icon span,
 .footer-menu-style1 ul li a:hover,
 .single-footer-widget .footer-contact-info ul li .text a:hover,
-.copyright-text p a,
 .single-info-box-style3 .inner .icon-holder span {
-    color: #E31C79;
+    color: #6377ee;
 }
-
-
-
-
-
-
 
 /*** 
 =====================================================
@@ -74,14 +65,8 @@
 .single-team-item .social-icon:hover .social-share-icon:before,
 .single-team-item .social-icon:hover .social-share-icon span:before,
 .footer-widget-links1 li a:before {
-    background: #E31C79;
+    background: #6377ee;
 }
-
-
-
-
-
-
 
 /*** 
 =====================================================
@@ -89,31 +74,21 @@
 =====================================================
 ***/
 .mobile-menu .navigation li > a:before {
-    border-left: 5px solid #E31C79;
+    border-left: 5px solid #6377ee;
 }
 .btn-one:before{
-    border: 2px solid #E31C79;
+    border: 2px solid #6377ee;
 }
 .banner-content-box.style3 .button-box a.btn-one:before {
-    border: 2px solid #E31C79;
+    border: 2px solid #6377ee;
 }
 .choose-style2-area .choose-style1-content-box .button-box .btn-one:before {
-    border: 2px solid #E31C79;
+    border: 2px solid #6377ee;
 }
-
 
 .styled-pagination li:hover a,
 .styled-pagination li.active a,
 .styled-pagination li.prev a:hover,
 .styled-pagination li.next a:hover {
-    border-color: #E31C79;
+    border-color: #6377ee;
 }
-
-
-
-
-
-
-
-
-

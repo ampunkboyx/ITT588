@@ -88,13 +88,14 @@ html,
 body { 
     height: 100%;
 }
+/*
 body {
     color: #808080;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-}
+}*/
 button:focus{
     outline: none;
 }
@@ -448,7 +449,6 @@ li{
 } 
 
 
-
 /*___ owl Nav Dot Style _____*/
 .owl-theme .owl-prev span, 
 .owl-theme .owl-next span {
@@ -764,17 +764,17 @@ li{
     bottom: 0;
     margin: 10px 0;
 }
-.switcher #styleOptions li {
+.switcher #styleOptions ul {
     position: relative;
     display: inline-block;
     width: 30px;
     height: 30px;
     margin-right: 3px;
 }
-.switcher #styleOptions li:last-child{
+.switcher #styleOptions ul:last-child{
     margin-right: 0;
 }
-.switcher #styleOptions li a {
+.switcher #styleOptions ul a {
     position: relative;
     display: inline-block;
     width:100%;
@@ -782,21 +782,19 @@ li{
     border-radius: 50%;
     box-shadow: 0 0 0 0px #fff;
 }
-.switcher #styleOptions li a.blue-color {
+.switcher #styleOptions ul a.deuteranomaly-color {
+    background: #80c080;
+}
+.switcher #styleOptions ul a.protanomaly-color {
+    background: #8080c0;
+}
+.switcher #styleOptions ul a.theme-color {
+    background: #da3c22;
+}
+.switcher #styleOptions ul a.protanopia-color {
     background: #6377ee;
 }
-.switcher #styleOptions li a.pink-color {
-    background: #E31C79;
-}
-.switcher #styleOptions li a.violet-color {
-    background: #6936d8;
-}
-.switcher #styleOptions li a.crimson-color {
-    background: #ba0913;
-}
-.switcher #styleOptions li a.orange-color {
-    background: #FF6600;
-}
+
 
 
 
@@ -2306,8 +2304,3 @@ select:focus {
     color: #0c1529;
     margin: 0;
 }
-
-
-
-
-
