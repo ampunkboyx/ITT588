@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="assets/css/scrollbar.css">
 	<link rel="stylesheet" href="assets/css/hiddenbar.css">
 	<link rel="stylesheet" href="assets/css/icomoon.css">
-   
+
     <link rel="stylesheet" href="assets/css/color.css">
     <link href="assets/css/color/theme-color.css" id="jssDefault" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/rtl.css">
@@ -36,35 +36,34 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
+    <style>
+        .deuteranopia-filter {
+          filter: url(#deuteranopia-filter);
+        }
+    
+        svg {
+          position: absolute;
+          width: 0;
+          height: 0;
+        }
+    
+        svg.filters {
+          width: 0;
+          height: 0;
+        }
+    
+        svg.filters > filter#deuteranopia-filter {
+          color-interpolation-filters: sRGB;
+        }
+    
+        svg.filters > filter#deuteranopia-filter > feColorMatrix {
+          type: matrix;
+          values: '0.625 0.375 0 0 0 0.7 0.3 0 0 0 0 0.3 0.7 0 0 0 0 0 1 0';
+        }
+      </style>
 </head>
 
 <body>
-<!-- switcher menu -->
-<div class="switcher">
-    <div class="switch_btn">
-        <button><img src="assets/images/color-palette.png" alt="Color Palette"></button>
-    </div>
-    <div class="switch_menu">
-        <!-- color changer -->
-        <div class="switcher_container">
-            <ul id="styleOptions">
-                <li>
-                    <a title="default" href="javascript: void(0)" data-theme="theme-color" class="blue-color"></a>
-                </li>
-                <li>
-                    <a title="protanopia" href="javascript: void(0)" data-theme="protanopia" class="blue-color"></a>
-                </li>
-                <li>
-                    <a title="deuteranomaly" href="javascript: void(0)" data-theme="deuteranomaly" class="blue-color"></a>
-                </li>
-                <li>
-                    <a title="protanomaly" href="javascript: void(0)" data-theme="protanomaly" class="blue-color"></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- end switcher menu -->
 
 <!--Start Header--> 
     <div class="header header-style2">
@@ -92,6 +91,21 @@
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="services.html">Services</a></li>
                                     <li><a href="team.html">About Us</a></li>
+                                    <li>
+                                        <a>
+                                            <label for="deuteranopia-toggle">Enable Deuteranopia Filter</label>
+                                            <input type="checkbox" id="deuteranopia-toggle">
+                                            <svg class="filters">
+                                                <filter id="deuteranopia-filter">
+                                                <feColorMatrix in="SourceGraphic" type="matrix"
+                                                    values="0.625 0.375 0 0 0
+                                                            0.7 0.3 0 0 0
+                                                            0.3 0.7 0 0 0
+                                                            0 0 0 1 0" />
+                                                </filter>
+                                            </svg>
+                                        </a>
+                                    </li>  
                                 </ul>
                             </div>
                         </nav>                        
@@ -338,7 +352,6 @@
     </div>
 </section>
 <!--End Choose Style2 Area-->
-
 <!--Start footer area-->  
 <footer class="footer-area">
     <div class="footer-bottom">
@@ -350,7 +363,7 @@
                 <div class="footer-menu-style1">
                     <ul>
                         <li><a>Terms of Service</a></li>
-                        <li><a>Privacy Policy</a></li>                       
+                        <li><a>Privacy Policy</a></li>                   
                     </ul>
                 </div>
             </div>    
@@ -397,7 +410,17 @@
 
 <!-- thm custom script -->
 <script src="assets/js/custom.js"></script>
+<script>
+    const toggle = document.getElementById('deuteranopia-toggle');
+    const body = document.body;
 
-
+    toggle.addEventListener('change', function() {
+      if (toggle.checked) {
+        body.classList.add('deuteranopia-filter');
+      } else {
+        body.classList.remove('deuteranopia-filter');
+      }
+    });
+</script>
 </body>
 </html>

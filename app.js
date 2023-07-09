@@ -165,3 +165,21 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 }
+
+window.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('deuteranopia-toggle');
+    const body = document.body;
+  
+    toggle.addEventListener('change', function() {
+      if (toggle.checked) {
+        body.classList.add('deuteranopia-filter');
+      } else {
+        body.classList.remove('deuteranopia-filter');
+      }
+    });
+  
+    // Rest of your existing code...
+    
+    // Add the remaining code from your previous app.js file here...
+    
+  });

@@ -36,7 +36,31 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="assets/js/html5shiv.js"></script>
     <![endif]-->
+    <style>
+        .deuteranopia-filter {
+          filter: url(#deuteranopia-filter);
+        }
     
+        svg {
+          position: absolute;
+          width: 0;
+          height: 0;
+        }
+    
+        svg.filters {
+          width: 0;
+          height: 0;
+        }
+    
+        svg.filters > filter#deuteranopia-filter {
+          color-interpolation-filters: sRGB;
+        }
+    
+        svg.filters > filter#deuteranopia-filter > feColorMatrix {
+          type: matrix;
+          values: '0.625 0.375 0 0 0 0.7 0.3 0 0 0 0 0.3 0.7 0 0 0 0 0 1 0';
+        }
+      </style>
 </head>
 
 <body>
@@ -67,6 +91,21 @@
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="services.html">Services</a></li>
                                 <li><a href="team.html">About Us</a></li>
+                                <li>
+                                    <a>
+                                        <label for="deuteranopia-toggle">Enable Deuteranopia Filter</label>
+                                        <input type="checkbox" id="deuteranopia-toggle">
+                                        <svg class="filters">
+                                            <filter id="deuteranopia-filter">
+                                            <feColorMatrix in="SourceGraphic" type="matrix"
+                                                values="0.625 0.375 0 0 0
+                                                        0.7 0.3 0 0 0
+                                                        0.3 0.7 0 0 0
+                                                        0 0 0 1 0" />
+                                            </filter>
+                                        </svg>
+                                    </a>
+                                </li>  
                             </ul>
                         </div>
                     </nav>                        
@@ -290,7 +329,18 @@
 
 <!-- thm custom script -->
 <script src="assets/js/custom.js"></script>
+<script>
+    const toggle = document.getElementById('deuteranopia-toggle');
+    const body = document.body;
 
+    toggle.addEventListener('change', function() {
+      if (toggle.checked) {
+        body.classList.add('deuteranopia-filter');
+      } else {
+        body.classList.remove('deuteranopia-filter');
+      }
+    });
+</script>
 
 
 </body>
