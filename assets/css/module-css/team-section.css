@@ -1,0 +1,193 @@
+
+
+/*** 
+=============================================
+  Team Style1 Area Css
+=============================================
+***/
+.team-style1-area{
+    position: relative;
+    display: block;
+    background: #f5f2e8;
+    padding: 150px 0 100px;
+}
+
+.single-team-item{
+    position:relative;
+    display: block;
+    margin-bottom: 50px;
+}
+.single-team-item .img-holder{
+    position:relative;
+    display: block;
+}
+.single-team-item .img-holder .inner {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.single-team-item .img-holder .inner:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(12, 21, 41, 0.40);
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    opacity: 1;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+    transform: scaleY(0);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    z-index: 1;
+}
+.single-team-item:hover .img-holder .inner:after{
+    transform: scaleY(1.0);    
+}
+.single-team-item .img-holder img{
+    width: 100%;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+.single-team-item:hover .img-holder img {
+    transform: scale(1.2);
+    transition: all 0.5s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+}
+
+
+.single-team-item .title-holder {
+    position: relative;
+    display: block;
+    background: #f5f2e8;
+    padding: 17px 30px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.single-team-item .title-holder h3 {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.single-team-item .title-holder h3 a{
+    color: #0c1529;
+}
+.single-team-item .title-holder p {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+}
+
+
+
+.single-team-item .social-icon {
+    position: absolute;
+    right: 30px;
+    bottom: -25px;
+    z-index: 10;
+}
+.single-team-item .social-icon ul {
+    position: relative;
+    display: block;
+    padding-bottom: 70px;
+    opacity: 0;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    -webkit-transform: perspective(400px) rotateX(90deg);
+    -ms-transform: perspective(400px) rotateX(90deg);
+    transform: perspective(400px) rotateX(90deg);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+}
+.single-team-item .social-icon:hover ul{
+    opacity: 1.0;
+    -webkit-transform: perspective(400px) rotateX(0deg);
+    -ms-transform: perspective(400px) rotateX(0deg);
+    transform: perspective(400px) rotateX(0deg);    
+}
+
+
+
+.single-team-item .social-icon ul li{
+    position: relative;
+    display: block;
+    float: none;
+    margin: 9.5px 0;
+}
+.single-team-item .social-icon ul li:first-child{
+    margin-top: 0;
+}
+.single-team-item .social-icon ul li:last-child{
+    margin-bottom: 0;
+}
+.single-team-item .social-icon ul li a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 50%;
+    color: #0c1529;
+    font-size: 15px;
+    line-height: 40px;
+    text-align: center;
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;    
+}
+.single-team-item .social-icon ul li a:hover{
+    color: #ffffff;
+}
+
+
+.social-share-icon {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 1;
+}
+.social-share-icon:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #0c1529;
+    content: "";
+    z-index: -1;
+    opacity: 0.30;
+    border-radius: 50%;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+}
+.social-share-icon span:before{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #0c1529;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    transition: all 200ms linear;
+    transition-delay: 0.2s;
+}
+
+
+

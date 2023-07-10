@@ -1,0 +1,173 @@
+
+
+/*** 
+=============================================
+    Choose Style1 Area Css
+=============================================
+***/
+.choose-style1-area{
+    position: relative;
+    display: block;
+    background: #0c1529;
+    padding: 120px 0 120px;
+}
+.choose-style1-area .layer-outer-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 70%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.choose-style1-content-box {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding: 57px 80px 80px;
+    margin-right: -275px;
+    border-radius: 20px;
+}
+.choose-style1-content-box h2{
+    color: #0c1529;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    margin: 0 0 22px;
+}
+.choose-style1-content-box ul{
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.choose-style1-content-box ul li{
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    margin-bottom: 14px;
+}
+.choose-style1-content-box ul li:last-child{
+    margin-bottom: 0;
+}
+.choose-style1-content-box ul li .dot-box{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.choose-style1-content-box ul li .text-box{
+    position: relative;
+    display: block;
+}
+.choose-style1-content-box ul li .text-box p{
+    color: #0c1529;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+}
+
+.choose-style1-content-box .button-box{
+    position: relative;
+    display: block;
+    padding-top: 40px;
+}
+.choose-style1-content-box .button-box .btn-one{
+    background-color: #0c1529;
+}
+.choose-style1-content-box .button-box .btn-one:before {
+    border: 2px solid #0c1529;
+}
+
+
+
+/*** 
+=============================================
+    Choose Style2 Area Css
+=============================================
+***/
+.choose-style2-area{
+    position: relative;
+    display: block;
+    background: #0c1529;
+    padding: 150px 0 160px;
+}
+.choose-style2-area .layer-outer-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.choose-style2-area .choose-style1-content-box {
+    background: transparent;
+    padding: 0px 0px 0px;
+    padding-right: 80px;
+    margin-right: 0px;
+    border-radius: 0px;
+}
+.choose-style2-area .choose-style1-content-box .sec-title {
+    padding-bottom: 29px;
+}
+.choose-style2-area .choose-style1-content-box ul li .text-box p {
+    color: #ffffff;
+}
+.choose-style2-area .choose-style1-content-box .button-box{
+    padding-top: 33px;
+}
+.choose-style2-area .choose-style1-content-box .button-box .btn-one {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+
+
+/*** 
+=============================================
+    Choose Style3 Area Css
+=============================================
+***/
+.choose-style2-area.choose-style3 .layer-outer-bg {
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    width: 50%;
+}
+.choose-style2-area.choose-style3 .choose-style1-content-box {
+    padding: 0px;
+    padding-right: 0px;
+    padding-left: 85px;
+    margin-right: 0px;
+    max-width: 585px;
+    width: 100%;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
