@@ -412,15 +412,37 @@
 <script src="assets/js/custom.js"></script>
 <script>
     const toggle = document.getElementById('deuteranopia-toggle');
+    const toggleLabel = document.querySelector('label[for="deuteranopia-toggle"]');
     const body = document.body;
 
     toggle.addEventListener('change', function() {
-      if (toggle.checked) {
+    if (toggle.checked) {
         body.classList.add('deuteranopia-filter');
-      } else {
+        localStorage.setItem('deuteranopia', 'enabled');
+        toggleLabel.textContent = 'Disable Deuteranopia Filter';
+    } else {
         body.classList.remove('deuteranopia-filter');
-      }
+        localStorage.setItem('deuteranopia', 'disabled');
+        toggleLabel.textContent = 'Enable Deuteranopia Filter';
+    }
     });
+
+    // Check the local storage and set the Deuteranopia filter accordingly
+    const deuteranopiaSetting = localStorage.getItem('deuteranopia');
+    if (deuteranopiaSetting === 'enabled') {
+    toggle.checked = true;
+    body.classList.add('deuteranopia-filter');
+    toggleLabel.textContent = 'Disable Deuteranopia Filter';
+    } else {
+    toggle.checked = false;
+    body.classList.remove('deuteranopia-filter');
+    toggleLabel.textContent = 'Enable Deuteranopia Filter';
+    }
+
+    // Clear the local storage when navigating back to index.html from other pages
+    if (window.performance && window.performance.navigation.type === 2) {
+    localStorage.removeItem('deuteranopia');
+    }
 </script>
 </body>
 </html>

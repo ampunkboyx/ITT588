@@ -88,6 +88,10 @@ html,
 body { 
     height: 100%;
 }
+
+body .deuteranopia-filter{ 
+    height: 100%;
+}
 /*
 body {
     color: #808080;

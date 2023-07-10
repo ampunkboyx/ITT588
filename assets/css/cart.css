@@ -93,19 +93,23 @@
     margin-right:auto;
     margin-left:auto;
 }
-.card{
+
+.card {
   position: fixed;
-  top:0;
-  left: 100%;
-  width: 500px;
-  background-color: #ffffff;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 9999;
   height: 100vh;
+  overflow-y: auto;
   transition: 0.5s;
 }
-.active .card{
+
+.active .card {
   left: calc(100% - 500px);
   z-index: 9999999999;
 }
+
 .card h1{
   color: #0a0a0a;
   font-weight: bolder;
@@ -162,7 +166,6 @@
 .listCard .count{
   margin: 0 10px;
 }
-
 /*the template
 
 .blog-grid-style1-area{

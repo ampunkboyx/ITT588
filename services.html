@@ -40,7 +40,7 @@
             .deuteranopia-filter {
             filter: url(#deuteranopia-filter);
             }
-        
+            
             svg {
             position: absolute;
             width: 0;
@@ -62,7 +62,7 @@
             }
         </style>
     </head>
-<body class="">
+<body >
     
     
     
@@ -263,12 +263,29 @@
     const body = document.body;
 
     toggle.addEventListener('change', function() {
-      if (toggle.checked) {
+        if (toggle.checked) {
         body.classList.add('deuteranopia-filter');
-      } else {
+        localStorage.setItem('deuteranopia', 'enabled');
+        } else {
         body.classList.remove('deuteranopia-filter');
-      }
+        localStorage.setItem('deuteranopia', 'disabled');
+        }
     });
-</script>
+
+    // Check the local storage and set the Deuteranopia filter accordingly
+    const deuteranopiaSetting = localStorage.getItem('deuteranopia');
+    if (deuteranopiaSetting === 'enabled') {
+        toggle.checked = true;
+        body.classList.add('deuteranopia-filter');
+    } else {
+        toggle.checked = false;
+        body.classList.remove('deuteranopia-filter');
+    }
+
+    // Clear the local storage when navigating back to index.html from other pages
+    if (window.performance && window.performance.navigation.type === 2) {
+        localStorage.removeItem('deuteranopia');
+    }
+  </script>
 </body>
 </html>

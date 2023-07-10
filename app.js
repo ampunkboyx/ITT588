@@ -1,3 +1,37 @@
+window.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('deuteranopia-toggle');
+    const toggleLabel = document.querySelector('label[for="deuteranopia-toggle"]');
+    const body = document.body;
+
+    toggle.addEventListener('change', function() {
+    if (toggle.checked) {
+        body.classList.add('deuteranopia-filter');
+        localStorage.setItem('deuteranopia', 'enabled');
+        toggleLabel.textContent = 'Disable Deuteranopia Filter';
+    } else {
+        body.classList.remove('deuteranopia-filter');
+        localStorage.setItem('deuteranopia', 'disabled');
+        toggleLabel.textContent = 'Enable Deuteranopia Filter';
+    }
+    });
+
+    // Check the local storage and set the Deuteranopia filter accordingly
+    const deuteranopiaSetting = localStorage.getItem('deuteranopia');
+    if (deuteranopiaSetting === 'enabled') {
+    toggle.checked = true;
+    body.classList.add('deuteranopia-filter');
+    toggleLabel.textContent = 'Disable Deuteranopia Filter';
+    } else {
+    toggle.checked = false;
+    body.classList.remove('deuteranopia-filter');
+    toggleLabel.textContent = 'Enable Deuteranopia Filter';
+    }
+
+    // Clear the local storage when navigating back to index.html from other pages
+    if (window.performance && window.performance.navigation.type === 2) {
+    localStorage.removeItem('deuteranopia');
+    }
+});
 let openShopping = document.querySelector('.shopping');
 let closeShopping = document.querySelector('.closeShopping');
 let list = document.querySelector('.list');
@@ -165,21 +199,3 @@ function changeQuantity(key, quantity){
     }
     reloadCard();
 }
-
-window.addEventListener('DOMContentLoaded', function() {
-    const toggle = document.getElementById('deuteranopia-toggle');
-    const body = document.body;
-  
-    toggle.addEventListener('change', function() {
-      if (toggle.checked) {
-        body.classList.add('deuteranopia-filter');
-      } else {
-        body.classList.remove('deuteranopia-filter');
-      }
-    });
-  
-    // Rest of your existing code...
-    
-    // Add the remaining code from your previous app.js file here...
-    
-  });
