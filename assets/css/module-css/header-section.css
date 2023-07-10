@@ -690,6 +690,7 @@
 .header-style2 .header-left .logo {
     padding-right: 0px;
     margin-right: 120px;
+    margin-top: 100000000px;
 }
 .header-style2 .header-left .logo:before {
     display: none;
